@@ -1,6 +1,7 @@
 plugins {
     id("java")
     application
+    checkstyle
 }
 
 application {
@@ -23,6 +24,7 @@ tasks.test {
     useJUnitPlatform()
 }
 
-tasks.getByName("run", JavaExec::class) {
+tasks.getByName("run", JavaExec::
+class) {
     standardInput = System.`in`
 }
