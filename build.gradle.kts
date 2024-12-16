@@ -1,5 +1,10 @@
 plugins {
     id("java")
+    application
+}
+
+application {
+    mainClass.set("io.hexlet.Application")
 }
 
 group = "hexlet.code"
