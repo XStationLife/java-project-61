@@ -1,15 +1,17 @@
-package hexlet.code;
+package hexlet.code.games;
+import hexlet.code.Engine;
+
 import java.util.Random;
 import java.util.Scanner;
 
-
 public class Even {
-    public static void even(Scanner scanner) {
-        Cli cli = new Cli(scanner);
+    public static void start() {
+        Scanner scanner = new Scanner(System.in);
+        Engine engine = new Engine();
+        Engine.greet();
         System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
         Random random = new Random();
         int correctAnswers = 0;
-        scanner.nextLine();
 
         while (correctAnswers < 3) { //Number of correct answers
             int number = random.nextInt(99) + 1;
@@ -23,10 +25,12 @@ public class Even {
             }
             else {
                 System.out.println("'" + answer + "' is wrong answer ;(. Correct answer was '" + (number % 2 == 0 ? "yes" : "no") + "'.");
-                System.out.println("Let's try again, " + cli.getName());
+                System.out.println("Let's try again, " + engine.getName());
+                break;
             }
         }
-        System.out.println("Congratulations, " + cli.getName() + "!");
-        scanner.close();
+        if (correctAnswers == 3) {
+            System.out.println("Congratulations, " + engine.getName() + "!");
+        }
     }
 }
