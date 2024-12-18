@@ -1,20 +1,22 @@
 package hexlet.code.games;
-import hexlet.code.Engine;
 
+import hexlet.code.Engine;
 import java.util.Random;
 import java.util.Scanner;
 
 public class Even {
     public static void start() {
         Scanner scanner = new Scanner(System.in);
+        Random random = new Random();
         Engine engine = new Engine();
         Engine.greet();
+
         System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
-        Random random = new Random();
         int correctAnswers = 0;
 
         while (correctAnswers < 3) { //Number of correct answers
             int number = random.nextInt(99) + 1;
+
             System.out.println("Question: " + number);
             System.out.print("Your answer: ");
             String answer = scanner.nextLine();

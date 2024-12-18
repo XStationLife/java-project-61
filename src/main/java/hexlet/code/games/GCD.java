@@ -4,25 +4,24 @@ import hexlet.code.Engine;
 import java.util.Random;
 import java.util.Scanner;
 
-public class Calc {
+public class GCD {
     public static void start() {
         Scanner scanner = new Scanner(System.in);
         Random random = new Random();
         Engine engine = new Engine();
         Engine.greet();
 
-        System.out.println("What is the result of the expression?");
+        System.out.println("Find the greatest common divisor of given numbers.");
         int correctAnswers = 0;
 
         while (correctAnswers < 3) {
             int number1 = random.nextInt(100);
             int number2 = random.nextInt(100);
-            char operator = randomOperator();
 
-            System.out.println("Question: " + number1 + operator + number2 + " ?");
+            System.out.println("Question: " + number1 + " " + number2);
             int userAnswer = scanner.nextInt();
 
-            int correctAnswer = calculate(number1, number2, operator);
+            int correctAnswer = findGCD(number1, number2);
 
             if (userAnswer == correctAnswer) {
                 System.out.println("Correct!");
@@ -39,22 +38,17 @@ public class Calc {
         }
     }
 
-    public static char randomOperator() {
-        char[] operators = {'+', '-', '*'};
-        Random random = new Random();
-        return operators[random.nextInt(operators.length)];
-    }
+    public static int findGCD(int number1, int number2) {
+        int gcd = 1;
 
-    public static int calculate(int number1, int number2, char operator) {
-        switch (operator) {
-            case '+':
-                return number1 + number2;
-            case '-':
-                return number1 - number2;
-            case '*':
-                return number1 * number2;
-            default:
-                return 0;
+        if (number1 == 0 || number2 == 0) {
+            return gcd;
         }
+        for (int i = 1; i <= number1; i++) {
+            if (number1 % i == 0 && number2 % i == 0) {
+                gcd = i;
+            }
+        }
+        return gcd;
     }
 }
