@@ -23,6 +23,8 @@ public class GCD {
 
             int correctAnswer = findGCD(number1, number2);
 
+
+
             if (userAnswer == correctAnswer) {
                 System.out.println("Correct!");
                 correctAnswers++;
