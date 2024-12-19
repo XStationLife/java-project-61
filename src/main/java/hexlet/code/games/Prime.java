@@ -18,6 +18,7 @@ public class Prime {
             int number = random.nextInt(100);
 
             System.out.println("Question: " + number);
+            System.out.print("Your answer: ");
             String userAnswer = scanner.nextLine();
             boolean correctAnswer = isPrime(number);
 

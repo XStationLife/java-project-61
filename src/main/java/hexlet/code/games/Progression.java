@@ -29,7 +29,8 @@ public class Progression {
                 } else {
                     System.out.print(progression[i] + " ");
                 }
-            }
+            } System.out.print("");
+            System.out.print("Your answer: ");
             int userAnswer = scanner.nextInt();
 
             if (userAnswer == hiddenNum) {

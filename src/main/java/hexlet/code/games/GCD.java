@@ -19,6 +19,7 @@ public class GCD {
             int number2 = random.nextInt(100);
 
             System.out.println("Question: " + number1 + " " + number2);
+            System.out.print("Your answer: ");
             int userAnswer = scanner.nextInt();
 
             int correctAnswer = findGCD(number1, number2);

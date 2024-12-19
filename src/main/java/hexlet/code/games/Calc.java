@@ -20,6 +20,7 @@ public class Calc {
             char operator = randomOperator();
 
             System.out.println("Question: " + number1 + operator + number2 + " ?");
+            System.out.print("Your answer: ");
             int userAnswer = scanner.nextInt();
 
             int correctAnswer = calculate(number1, number2, operator);
