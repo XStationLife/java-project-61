@@ -1,7 +1,7 @@
 plugins {
     id("java")
-    application
-    checkstyle
+    id("application")
+    id("checkstyle")
 }
 
 application {
