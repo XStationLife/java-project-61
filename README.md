@@ -15,4 +15,4 @@
 "Арифметическая прогрессия":
 [![asciicast](https://asciinema.org/a/xxreZbto5MDzM8g228nWjqzTo.svg)](https://asciinema.org/a/xxreZbto5MDzM8g228nWjqzTo)
 Простое ли число?:
-[![asciicast](https://asciinema.org/a/kUzPAJZvbXjRrJLEEZKskZ6vq.svg)](https://asciinema.org/a/kUzPAJZvbXjRrJLEEZKskZ6vq)
+[![asciicast](https://asciinema.org/a/kUzPAJZvbXjRrJLEEZKskZ6vq.svg)](https://asciinema.org/a/kUzPAJZvbXjRrJLEEZKskZ6)
