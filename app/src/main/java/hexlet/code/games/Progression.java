@@ -10,14 +10,18 @@ public class Progression {
         Random random = new Random();
         Engine engine = new Engine();
         Engine.greet();
+        final var maxOfNumber = 20;
+        final var maxStep = 5;
+        final var maxCountOfNumbers = 10;
+        final var minCountOfNumbers = 3;
 
         System.out.println("What number is missing in the progression?");
         int correctAnswers = 0;
-
-        while (correctAnswers < 3) {
-            int firstNumber = random.nextInt(0, 20);
-            int step = random.nextInt(1, 5);
-            int countOfNumbers = random.nextInt(3, 10);
+        final var countOfGamesToWin = 3;
+        while (correctAnswers < countOfGamesToWin) {
+            int firstNumber = random.nextInt(0, maxOfNumber);
+            int step = random.nextInt(1, maxStep);
+            int countOfNumbers = random.nextInt(minCountOfNumbers, maxCountOfNumbers);
             int[] progression = getProgression(firstNumber, step, countOfNumbers);
             int indexOfHiddenNumber = random.nextInt(progression.length);
             int hiddenNum = progression[indexOfHiddenNumber];
@@ -42,7 +46,7 @@ public class Progression {
                 break;
             }
         }
-        if (correctAnswers == 3) {
+        if (correctAnswers == countOfGamesToWin) {
             System.out.println("Congratulations, " + engine.getName() + "!");
         }
     }

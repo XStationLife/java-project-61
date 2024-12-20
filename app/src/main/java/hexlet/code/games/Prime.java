@@ -13,9 +13,10 @@ public class Prime {
 
         System.out.println("Answer 'yes' if given number is prime. Otherwise answer 'no'.");
         int correctAnswers = 0;
-
-        while (correctAnswers < 3) {
-            int number = random.nextInt(100);
+        final var countOfGamesToWin = 3;
+        final var maxValueOfNumber = 100;
+        while (correctAnswers < countOfGamesToWin) {
+            int number = random.nextInt(maxValueOfNumber);
 
             System.out.println("Question: " + number);
             System.out.print("Your answer: ");
@@ -32,7 +33,7 @@ public class Prime {
                 break;
             }
         }
-        if (correctAnswers == 3) {
+        if (correctAnswers == countOfGamesToWin) {
             System.out.println("Congratulations, " + engine.getName() + "!");
         }
 

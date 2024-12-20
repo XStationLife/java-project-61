@@ -13,10 +13,11 @@ public class GCD {
 
         System.out.println("Find the greatest common divisor of given numbers.");
         int correctAnswers = 0;
-
-        while (correctAnswers < 3) {
-            int number1 = random.nextInt(100);
-            int number2 = random.nextInt(100);
+        final var countOfGamesToWin = 3;
+        final var maxValueOfNumber = 100;
+        while (correctAnswers < countOfGamesToWin) {
+            int number1 = random.nextInt(maxValueOfNumber);
+            int number2 = random.nextInt(maxValueOfNumber);
 
             System.out.println("Question: " + number1 + " " + number2);
             System.out.print("Your answer: ");
@@ -36,7 +37,7 @@ public class GCD {
                 break;
             }
         }
-        if (correctAnswers == 3) {
+        if (correctAnswers == countOfGamesToWin) {
             System.out.println("Congratulations, " + engine.getName() + "!");
         }
     }

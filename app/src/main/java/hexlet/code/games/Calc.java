@@ -13,10 +13,11 @@ public class Calc {
 
         System.out.println("What is the result of the expression?");
         int correctAnswers = 0;
-
-        while (correctAnswers < 3) {
-            int number1 = random.nextInt(100);
-            int number2 = random.nextInt(100);
+        final var countOfGamesToWin = 3;
+        final var maxValueOfNumber = 100;
+        while (correctAnswers < countOfGamesToWin) {
+            int number1 = random.nextInt(maxValueOfNumber);
+            int number2 = random.nextInt(maxValueOfNumber);
             char operator = randomOperator();
 
             System.out.println("Question: " + number1 + " " + operator + " " + number2 + " ?");
@@ -35,7 +36,7 @@ public class Calc {
                 break;
             }
         }
-        if (correctAnswers == 3) {
+        if (correctAnswers == countOfGamesToWin) {
             System.out.println("Congratulations, " + engine.getName() + "!");
         }
     }

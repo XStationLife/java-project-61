@@ -13,9 +13,10 @@ public class Even {
 
         System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
         int correctAnswers = 0;
-
-        while (correctAnswers < 3) { //Number of correct answers
-            int number = random.nextInt(99) + 1;
+        final var countOfGamesToWin = 3;
+        final var maxValueOfNumber = 99;
+        while (correctAnswers < countOfGamesToWin) { //Number of correct answers
+            int number = random.nextInt(maxValueOfNumber) + 1;
 
             System.out.println("Question: " + number);
             System.out.print("Your answer: ");
@@ -31,7 +32,7 @@ public class Even {
                 break;
             }
         }
-        if (correctAnswers == 3) {
+        if (correctAnswers == countOfGamesToWin) {
             System.out.println("Congratulations, " + engine.getName() + "!");
         }
     }
