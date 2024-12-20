@@ -13,7 +13,7 @@ public class Progression {
         final var maxOfNumber = 20;
         final var maxStep = 5;
         final var maxCountOfNumbers = 10;
-        final var minCountOfNumbers = 3;
+        final var minCountOfNumbers = 5;
 
         System.out.println("What number is missing in the progression?");
         int correctAnswers = 0;
