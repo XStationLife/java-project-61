@@ -27,7 +27,8 @@ public class Even {
                 correctAnswers++;
             }
             else {
-                System.out.println("'" + answer + "' is wrong answer ;(. Correct answer was '" + (number % 2 == 0 ? "yes" : "no") + "'.");
+                System.out.println("'" + answer + "' is wrong answer ;(.");
+                System.out.println("Correct answer was '" + (number % 2 == 0 ? "yes" : "no") + "'.");
                 System.out.println("Let's try again, " + engine.getName() + "!");
                 break;
             }

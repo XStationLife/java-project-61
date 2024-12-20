@@ -26,9 +26,10 @@ public class Prime {
             if ((isPrime(number) && userAnswer.equals("yes")) || (!isPrime(number) && userAnswer.equals("no"))) {
                 System.out.println("Correct!");
                 correctAnswers++;
-            }
-            else {
-                System.out.println("'" + userAnswer + "'" + "is wrong answer ;(. Correct answer was '" + (correctAnswer ? "yes" : "no") + "'.");
+            } else {
+                System.out.println("'" + userAnswer + "'" + "is wrong answer ;(.");
+                System.out.println("Correct answer was '" + (correctAnswer ? "yes" : "no") + "'.");
+
                 System.out.println("Let's try again, " + engine.getName() + "!");
                 break;
             }
