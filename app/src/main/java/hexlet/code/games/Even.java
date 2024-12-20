@@ -25,8 +25,7 @@ public class Even {
             if ((number % 2 == 0 && answer.equals("yes")) || (number % 2 != 0 && answer.equals("no"))) {
                 System.out.println("Correct!");
                 correctAnswers++;
-            }
-            else {
+            } else {
                 System.out.println("'" + answer + "' is wrong answer ;(.");
                 System.out.println("Correct answer was '" + (number % 2 == 0 ? "yes" : "no") + "'.");
                 System.out.println("Let's try again, " + engine.getName() + "!");
