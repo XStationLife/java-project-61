@@ -33,7 +33,7 @@ public class Progression {
                 } else {
                     System.out.print(progression[i] + " ");
                 }
-            } System.out.print("");
+            } System.out.println("");
             System.out.print("Your answer: ");
             int userAnswer = scanner.nextInt();
 
