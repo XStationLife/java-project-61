@@ -19,7 +19,7 @@ public class Calc {
             int number2 = random.nextInt(100);
             char operator = randomOperator();
 
-            System.out.println("Question: " + number1 + operator + number2 + " ?");
+            System.out.println("Question: " + number1 + " " + operator + " " + number2 + " ?");
             System.out.print("Your answer: ");
             int userAnswer = scanner.nextInt();
 
